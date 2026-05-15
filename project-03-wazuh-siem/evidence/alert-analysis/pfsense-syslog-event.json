@@ -1,0 +1,46 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.05.15",
+  "_id": "dxKRLJ4BrCsaPwODJH4a",
+  "_score": null,
+  "_source": {
+    "predecoder": {
+      "hostname": "/usr/sbin/cron[95544]:",
+      "timestamp": "May 15 13:56:00"
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "name": "wazuh",
+      "id": "000"
+    },
+    "manager": {
+      "name": "wazuh"
+    },
+    "rule": {
+      "firedtimes": 21,
+      "mail": false,
+      "level": 3,
+      "description": "pfSese syslog message received from system log rotation activity",
+      "groups": [
+        "pfsense",
+        "syslog",
+        "lab_validation"
+      ],
+      "id": "100301"
+    },
+    "location": "172.30.2.1",
+    "decoder": {},
+    "id": "1778864160.2970472",
+    "full_log": "May 15 13:56:00 /usr/sbin/cron[95544]: (root) CMD (/usr/sbin/newsyslog)",
+    "timestamp": "2026-05-15T16:56:00.093+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-05-15T16:56:00.093Z"
+    ]
+  },
+  "sort": [
+    1778864160093
+  ]
+}

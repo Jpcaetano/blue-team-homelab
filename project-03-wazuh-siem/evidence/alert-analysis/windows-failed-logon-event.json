@@ -1,0 +1,119 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.05.15",
+  "_id": "xRJKK54BrCsaPwODoXZC",
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.6.12",
+      "name": "Win11JOAO",
+      "id": "001"
+    },
+    "manager": {
+      "name": "wazuh"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "subjectLogonId": "0x3e7",
+          "subjectDomainName": "WORKGROUP",
+          "ipAddress": "127.0.0.1",
+          "authenticationPackageName": "Negotiate",
+          "subStatus": "0xc0000380",
+          "logonProcessName": "User32",
+          "keyLength": "0",
+          "subjectUserSid": "S-1-5-18",
+          "processId": "0x7ac",
+          "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+          "ipPort": "0",
+          "failureReason": "%%2304",
+          "targetUserSid": "S-1-0-0",
+          "logonType": "2",
+          "subjectUserName": "CAETANO$",
+          "status": "0xc000006d"
+        },
+        "system": {
+          "eventID": "4625",
+          "keywords": "0x8010000000000000",
+          "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+          "level": "0",
+          "channel": "Security",
+          "opcode": "0",
+          "message": "\"Falha no logon de uma conta.\r\n\r\nRequerente:\r\n\tIdentificação de segurança:\t\tS-1-5-18\r\n\tNome da conta:\t\tCAETANO$\r\n\tDomínio da conta:\t\tWORKGROUP\r\n\tIdentificação de logon:\t\t0x3E7\r\n\r\nTipo de logon:\t\t\t2\r\n\r\nConta cujo logon falhou:\r\n\tIdentificação de segurança:\t\tS-1-0-0\r\n\tNome da conta:\t\t-\r\n\tDomínio da conta:\t\t-\r\n\r\nInformações da falha:\r\n\tRazão da falha:\t\tErro durante o logon.\r\n\tStatus:\t\t\t0xC000006D\r\n\tSubstatus:\t\t0xC0000380\r\n\r\nInformações do processo:\r\n\tID de processo do chamador:\t0x7ac\r\n\tNome de processo do chamador:\tC:\\Windows\\System32\\svchost.exe\r\n\r\nInformações da rede:\r\n\tNome da estação de trabalho:\t-\r\n\tEndereço da rede de origem:\t127.0.0.1\r\n\tPorta de origem:\t\t0\r\n\r\nInformações detalhadas da autenticação:\r\n\tProcesso de logon:\t\tUser32 \r\n\tPacote de autenticação:\tNegotiate\r\n\tServiços transitados:\t-\r\n\tNome do pacote (somente NTLM):\t-\r\n\tComprimento da chave:\t\t0\r\n\r\n:Este evento é gerado quando uma solicitação de logon falha. Ele é gerado no computador em houve a tentativa de acesso.\r\n\r\nOs campos do assunto indicam a Conta Sistema Local que solicitou o logon. Comumente, isto é um serviço como o de servidor ou um processo local como Winlogon.exe ou Services.exe.\r\n\r\nO campo tipo de logon indica o tipo de logon ocorrido. Os tipos mais comuns são 2 (interativo) e 3 (em rede).\r\n\r\nOs campos de informações do processo indicam qual conta ou processo do sistema solicitaram o logon.\r\n\r\nOs campos informações de rede indicam onde a solicitação de logon remoto se originou. O nome da estação de trabalho nem sempre está disponível e pode ser deixado em branco em alguns casos.\r\n\r\nOs campos de informações de autenticação fornecem informações detalhadas sobre esta solicitação específica de logon.\r\n\t- Serviços transitados indicam qual serviço intermediário participou desta solicitação de logon.\r\n\t- Nome de pacote indica qual subprotocolo foi usado, entre os protocolos NTLM.\r\n\t- Comprimento da chave indica o comprimento da chave da sessão gerada. Ele será 0 se nenhuma chave de sessão foi solicitada.\"",
+          "version": "0",
+          "systemTime": "2026-05-15T10:41:47.9047966Z",
+          "eventRecordID": "4183802",
+          "threadID": "1776",
+          "computer": "CAETANO",
+          "task": "12544",
+          "processID": "1244",
+          "severityValue": "AUDIT_FAILURE",
+          "providerName": "Microsoft-Windows-Security-Auditing"
+        }
+      }
+    },
+    "rule": {
+      "mail": false,
+      "level": 5,
+      "pci_dss": [
+        "10.2.4",
+        "10.2.5"
+      ],
+      "hipaa": [
+        "164.312.b"
+      ],
+      "tsc": [
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "Logon Failure - Unknown user or bad password",
+      "groups": [
+        "windows",
+        "windows_security",
+        "authentication_failed"
+      ],
+      "nist_800_53": [
+        "AU.14",
+        "AC.7"
+      ],
+      "gdpr": [
+        "IV_35.7.d",
+        "IV_32.2"
+      ],
+      "firedtimes": 1,
+      "mitre": {
+        "technique": [
+          "Account Access Removal"
+        ],
+        "id": [
+          "T1531"
+        ],
+        "tactic": [
+          "Impact"
+        ]
+      },
+      "id": "60122",
+      "gpg13": [
+        "7.1"
+      ]
+    },
+    "location": "EventChannel",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "id": "1778842724.959142",
+    "timestamp": "2026-05-15T10:58:44.645+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-05-15T10:58:44.645Z"
+    ]
+  },
+  "sort": [
+    1778842724645
+  ]
+}

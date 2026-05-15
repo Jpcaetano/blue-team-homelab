@@ -1,0 +1,216 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.05.15",
+  "_id": "9BLqK54BrCsaPwODcXcj",
+  "_score": null,
+  "_source": {
+    "syscheck": {
+      "size_before": "0",
+      "uname_after": "Administradores",
+      "mtime_after": "2026-05-15T13:53:49",
+      "size_after": "59",
+      "md5_before": "d41d8cd98f00b204e9800998ecf8427e",
+      "diff": "---\n> FIM modification test - content added after file creation\n",
+      "win_perm_after": [
+        {
+          "allowed": [
+            "DELETE",
+            "READ_CONTROL",
+            "WRITE_DAC",
+            "WRITE_OWNER",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "WRITE_DATA",
+            "APPEND_DATA",
+            "READ_EA",
+            "WRITE_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES",
+            "WRITE_ATTRIBUTES",
+            [
+              "DELETE",
+              "READ_CONTROL",
+              "WRITE_DAC",
+              "WRITE_OWNER",
+              "SYNCHRONIZE",
+              "READ_DATA",
+              "WRITE_DATA",
+              "APPEND_DATA",
+              "READ_EA",
+              "WRITE_EA",
+              "EXECUTE",
+              "READ_ATTRIBUTES",
+              "WRITE_ATTRIBUTES"
+            ],
+            [
+              "READ_CONTROL",
+              "SYNCHRONIZE",
+              "READ_DATA",
+              "READ_EA",
+              "EXECUTE",
+              "READ_ATTRIBUTES"
+            ],
+            [
+              "DELETE",
+              "READ_CONTROL",
+              "SYNCHRONIZE",
+              "READ_DATA",
+              "WRITE_DATA",
+              "APPEND_DATA",
+              "READ_EA",
+              "WRITE_EA",
+              "EXECUTE",
+              "READ_ATTRIBUTES",
+              "WRITE_ATTRIBUTES"
+            ]
+          ],
+          "name": "Administradores"
+        },
+        {
+          "allowed": [
+            "DELETE",
+            "READ_CONTROL",
+            "WRITE_DAC",
+            "WRITE_OWNER",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "WRITE_DATA",
+            "APPEND_DATA",
+            "READ_EA",
+            "WRITE_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES",
+            "WRITE_ATTRIBUTES"
+          ],
+          "name": "SISTEMA"
+        },
+        {
+          "allowed": [
+            "READ_CONTROL",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "READ_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES"
+          ],
+          "name": "Usu�rios"
+        },
+        {
+          "allowed": [
+            "DELETE",
+            "READ_CONTROL",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "WRITE_DATA",
+            "APPEND_DATA",
+            "READ_EA",
+            "WRITE_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES",
+            "WRITE_ATTRIBUTES"
+          ],
+          "name": "Usu�rios autenticados"
+        }
+      ],
+      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime_before": "2026-05-15T13:51:07",
+      "mode": "scheduled",
+      "path": "c:\\wazuh-fim-lab\\test-file.txt",
+      "sha1_after": "77b3ad886957dc43ac7da52ff4a39ff473f90199",
+      "changed_attributes": [
+        "size",
+        "mtime",
+        "md5",
+        "sha1",
+        "sha256"
+      ],
+      "attrs_after": [
+        "ARCHIVE"
+      ],
+      "uid_after": "S-1-5-32-544",
+      "event": "modified",
+      "md5_after": "dbb3137ad5913f5791030fd8b9153e11",
+      "sha1_before": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "sha256_after": "c4f878c2aa8e47cbac6efd08531143733e33fe8e136b00f89cd90fb69f0a985f"
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.6.12",
+      "name": "Win11JOAO",
+      "id": "001"
+    },
+    "manager": {
+      "name": "wazuh"
+    },
+    "rule": {
+      "mail": false,
+      "level": 7,
+      "pci_dss": [
+        "11.5"
+      ],
+      "hipaa": [
+        "164.312.c.1",
+        "164.312.c.2"
+      ],
+      "tsc": [
+        "PI1.4",
+        "PI1.5",
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "Integrity checksum changed.",
+      "groups": [
+        "ossec",
+        "syscheck",
+        "syscheck_entry_modified",
+        "syscheck_file"
+      ],
+      "nist_800_53": [
+        "SI.7"
+      ],
+      "gdpr": [
+        "II_5.1.f"
+      ],
+      "firedtimes": 2,
+      "mitre": {
+        "technique": [
+          "Stored Data Manipulation"
+        ],
+        "id": [
+          "T1565.001"
+        ],
+        "tactic": [
+          "Impact"
+        ]
+      },
+      "id": "550",
+      "gpg13": [
+        "4.11"
+      ]
+    },
+    "location": "syscheck",
+    "decoder": {
+      "name": "syscheck_integrity_changed"
+    },
+    "id": "1778853238.1913109",
+    "full_log": "File 'c:\\wazuh-fim-lab\\test-file.txt' modified\nMode: scheduled\nChanged attributes: size,mtime,md5,sha1,sha256\nSize changed from '0' to '59'\nOld modification time was: '1778853067', now it is '1778853229'\nOld md5sum was: 'd41d8cd98f00b204e9800998ecf8427e'\nNew md5sum is : 'dbb3137ad5913f5791030fd8b9153e11'\nOld sha1sum was: 'da39a3ee5e6b4b0d3255bfef95601890afd80709'\nNew sha1sum is : '77b3ad886957dc43ac7da52ff4a39ff473f90199'\nOld sha256sum was: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'\nNew sha256sum is : 'c4f878c2aa8e47cbac6efd08531143733e33fe8e136b00f89cd90fb69f0a985f'\n",
+    "timestamp": "2026-05-15T13:53:58.688+0000"
+  },
+  "fields": {
+    "syscheck.mtime_after": [
+      "2026-05-15T13:53:49.000Z"
+    ],
+    "syscheck.mtime_before": [
+      "2026-05-15T13:51:07.000Z"
+    ],
+    "timestamp": [
+      "2026-05-15T13:53:58.688Z"
+    ]
+  },
+  "sort": [
+    1778853238688
+  ]
+}
