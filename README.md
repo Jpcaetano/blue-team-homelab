@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/blue%20team%20homelab%20view.png" alt="Blue Team Home Lab overview" width="100%">
+</p>
+
 # Blue Team Home Lab Portfolio
 
 ![Status](https://img.shields.io/badge/status-active-success)
